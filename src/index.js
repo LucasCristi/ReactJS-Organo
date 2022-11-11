@@ -1,3 +1,5 @@
+//BOOTSTRAP DA APLICAÇÃO - PONTO ZERO
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -6,7 +8,8 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  //stricmode serve para ajudar no desenvolvimento, mostro logs dos erros
+  <React.StrictMode> 
     <App />
   </React.StrictMode>
 );
