@@ -1,10 +1,16 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner";
 import Formulario from "./componentes/Formulario";
+import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 
 function App() {
   const listaPosicoes = [
+    {
+      nome: "",
+      corPrimaria: "",
+      corSecundaria: "",
+    },
     {
       nome: "Atacante",
       corPrimaria: "#57c278",
@@ -28,7 +34,7 @@ function App() {
     {
       nome: "Meio-campo",
       corPrimaria: "#D86EBF",
-      corSecundaria: "#FAE95F5",
+      corSecundaria: "#FFF3F3",
     },
     {
       nome: "Volante",
@@ -45,7 +51,7 @@ function App() {
   const [jogadores, setJogadores] = useState([]); //receberá a lista que vem do Formulário
 
   const novoJogadorAdicionado = (jogador) => {
-    console.log(jogador); //vai criar um objeto no Formulário
+    // console.log(jogador); //vai criar um objeto no Formulário
     setJogadores([...jogadores, jogador]);
   };
 
@@ -53,6 +59,7 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario
+        listaPosicoes={listaPosicoes.map(posicao => posicao.nome)}
         jogadorCadastrado={(jogador) => novoJogadorAdicionado(jogador)}
       />
       {listaPosicoes.map((posicao) => (
@@ -61,8 +68,10 @@ function App() {
           nome={posicao.nome}
           corPrimaria={posicao.corPrimaria}
           corSecundaria={posicao.corSecundaria}
+          jogadores={jogadores.filter(jogador => jogador.posicao === posicao.nome)}
         />
       ))}
+      <Rodape/>
     </div>
   );
 }

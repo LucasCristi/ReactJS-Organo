@@ -5,7 +5,7 @@ const CampoTexto = (props) => {
   const placeholderModificada = `${props.placeholder}...`;
 
   const aoDigitado = (evento) => {
-    console.log(evento.target.value)
+    // console.log(evento.target.value)
     props.aoAlterado(evento.target.value); //vem do Formulario
   };
 

@@ -6,27 +6,36 @@ import "./Formulario.css";
 
 const Formulario = (props) => {
   
-  const listaPosicao = [
-    "",
-    "Atacante",
-    "Goleiro",
-    "Lateral direito",
-    "Lateral esquerdo",
-    "Meio-campo",
-    "Volante",
-    "Zagueiro",
-  ];
+  // const listaPosicao = [
+  //   "",
+  //   "Atacante",
+  //   "Goleiro",
+  //   "Lateral direito",
+  //   "Lateral esquerdo",
+  //   "Meio-campo",
+  //   "Volante",
+  //   "Zagueiro",
+  // ];
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
     // console.log('Form enviado com sucesso!', nome, selecao, imagem, posicao)
+
+
+
     props.jogadorCadastrado({ //props criada no App.js para pegar o objeto
       nome,
       selecao,
       imagem,
       posicao
     })
+    setNome('')
+    setImagem('')
+    setSelecao('')
+    setPosicao([])
   };
+
+
 
   const [nome, setNome] = useState('');
   const [selecao, setSelecao] = useState('');
@@ -61,7 +70,7 @@ const Formulario = (props) => {
         <ListaSupensa
           obrigatorio={true}
           label="Posição"
-          itens={listaPosicao}
+          itens={props.listaPosicoes}
           valor={posicao}
           aoAlterado={(valor) => setPosicao(valor)}
         />
