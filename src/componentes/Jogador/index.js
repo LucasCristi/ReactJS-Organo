@@ -11,7 +11,7 @@ const Jogador = ({ nome, imagem, selecao, corDeFundo, deletarJogador }) => {
       <div className="rodape">
         <h4>{nome} </h4>
         <h5>{selecao} </h5>
-      <button onClick={(index) => deletarJogador(index)}> x </button>
+        {/* <button onClick={deletarJogador}> x </button> */}
       </div>
     </div>
   );

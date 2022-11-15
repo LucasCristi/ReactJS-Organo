@@ -52,18 +52,20 @@ function App() {
 
   const novoJogadorAdicionado = (jogador) => {
     // console.log(jogador); //vai criar um objeto no Formulário
+    // console.log([...jogadores, jogador])
     setJogadores([...jogadores, jogador]);
   };
 
-  const deletaJogadores = (index) => {
-    let novosJogadores = [...jogadores];
-    console.log(jogadores);
+  // const deletaJogadores = (jogador) => {
+  //   console.log(jogadores)
+  //   let novosJogadores = [...jogadores];
+  //   novosJogadores.splice(jogador, 1);
+    
+  //   console.log(novosJogadores)
+  //   console.log(jogador)
 
-    novosJogadores.splice(index, 1);
-
-    console.log(novosJogadores);
-    setJogadores(novosJogadores);
-  };
+  //   setJogadores(novosJogadores);
+  // };
 
   return (
     <div className="App">
@@ -81,7 +83,7 @@ function App() {
           jogadores={jogadores.filter(
             (jogador) => jogador.posicao === posicao.nome
           )}
-          deletaJogador={deletaJogadores}
+          // deletaJogador={(jogador) =>  deletaJogadores(jogador)}
         />
       ))}
       <Rodape />
