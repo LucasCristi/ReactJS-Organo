@@ -1,0 +1,16 @@
+.botao-excluir {
+  border: none;
+  background-color:  #6278f7;
+  color: #fff;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.botao-excluir:hover{
+    background-color: rgb(126, 18, 18);
+}

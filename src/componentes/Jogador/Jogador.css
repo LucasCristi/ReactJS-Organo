@@ -1,37 +1,60 @@
-.colaborador {
-    width: 280px;
+.jogador {
+    width: 20rem;
+    margin: 1rem;
 }
 
-.colaborador .cabecalho {
+.jogador .cabecalho {
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
-.colaborador img {
-    width: 100px;
+.jogador img {
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
+    border: 2px solid #fff;
+    margin: .5rem auto;
+    image-resolution: from-image;
 }
 
-.colaborador .rodape {
+.jogador .rodape {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: .5rem;
 }
 
-.colaborador .rodape h4 {
+.jogador .rodape h4 {
     color: #6278F7;
-    font-size: 18px;
+    font-size: 1.5rem;
     line-height: 22px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: .2rem;
+    word-wrap: break-word;
+    padding: 0 1rem;
 }
 
-.colaborador .rodape h5 {
-    font-size: 18px;
-    line-height: 22px;
+.jogador .rodape h5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
     color: #212121;
-    padding: 0 16px;
+    word-wrap: break-word;
+    padding: 0 1rem;
+}
+
+.rodape button{
+    border: none;
+    background-color: #6278F7;
+    color: #fff;
+    padding: .3rem;
+    border-radius: 100%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.rodape button:hover{
+    background-color: rgb(97, 2, 2);
 }

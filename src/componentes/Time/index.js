@@ -6,15 +6,16 @@ const Time = (props) => {
     <section className="time" style={{ backgroundColor: props.corSecundaria }}>
       <h3 style={{ borderColor: props.corPrimaria }}>{props.nome} </h3>
       <div className="colaboradores">
-        {props.jogadores.map((jogador) => (
+        {props.jogadores.map((jogador, index) => (
           <Jogador
             corDeFundo={props.corPrimaria}
             key={jogador.nome}
             nome={jogador.nome}
             imagem={jogador.imagem}
             selecao={jogador.selecao}
-          />
-        ))}
+            deletarJogador={(jogador) => props.deletaJogador(index)}
+            />
+            ))}
       </div>
     </section>
   ) : (

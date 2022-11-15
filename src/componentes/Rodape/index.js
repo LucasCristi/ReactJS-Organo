@@ -8,17 +8,17 @@ const Rodape = () => {
       <section>
         <ul>
           <li>
-            <a href="facebook.com" target="_blank">
+            <a href="https://www.facebook.com/lucas.cristi" >
               <img src="/imagens/fb.png" alt="facebook" />
             </a>
           </li>
           <li>
-            <a href="twitter.com" target="_blank">
+            <a href="https://twitter.com/home?lang=pt" >
               <img src="/imagens/tw.png" alt="twitter" />
             </a>
           </li>
           <li>
-            <a href="instagram.com" target="_blank">
+            <a href="https://www.instagram.com/lucascristi/" >
               <img src="/imagens/ig.png" alt="intragram" />
             </a>
           </li>
@@ -28,7 +28,7 @@ const Rodape = () => {
         <img src="/imagens/logo.png" alt="" />
       </section>
       <section>
-        <p>Desenvolvido por Alura.</p>
+        <p>Desenvolvido por Lucas Cristi, através de curso React JS da <a href="https://www.alura.com.br/" >Alura</a>.</p>
       </section>
     </footer>
   );

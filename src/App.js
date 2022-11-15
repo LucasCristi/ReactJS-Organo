@@ -55,11 +55,21 @@ function App() {
     setJogadores([...jogadores, jogador]);
   };
 
+  const deletaJogadores = (index) => {
+    let novosJogadores = [...jogadores];
+    console.log(jogadores);
+
+    novosJogadores.splice(index, 1);
+
+    console.log(novosJogadores);
+    setJogadores(novosJogadores);
+  };
+
   return (
     <div className="App">
       <Banner />
       <Formulario
-        listaPosicoes={listaPosicoes.map(posicao => posicao.nome)}
+        listaPosicoes={listaPosicoes.map((posicao) => posicao.nome)}
         jogadorCadastrado={(jogador) => novoJogadorAdicionado(jogador)}
       />
       {listaPosicoes.map((posicao) => (
@@ -68,10 +78,13 @@ function App() {
           nome={posicao.nome}
           corPrimaria={posicao.corPrimaria}
           corSecundaria={posicao.corSecundaria}
-          jogadores={jogadores.filter(jogador => jogador.posicao === posicao.nome)}
+          jogadores={jogadores.filter(
+            (jogador) => jogador.posicao === posicao.nome
+          )}
+          deletaJogador={deletaJogadores}
         />
       ))}
-      <Rodape/>
+      <Rodape />
     </div>
   );
 }
