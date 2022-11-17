@@ -14,7 +14,7 @@ const Time = (props) => {
             nome={`${jogador.nome} (i:${index})`} 
             imagem={jogador.imagem}
             selecao={jogador.selecao}
-            deletarJogador={() => props.deletaJogador(index)}
+            // deletarJogador={() => props.deletaJogador(index)}
             />
             ))}
       </div>

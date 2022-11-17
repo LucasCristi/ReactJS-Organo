@@ -57,15 +57,15 @@ function App() {
     console.log([...jogadores])
   };
 
-  const deletaJogadores = (index) => {
-    // console.log(jogador)
-    let novosJogadores = [...jogadores];
+  // const deletaJogadores = (index) => {
+  //   // console.log(jogador)
+  //   let novosJogadores = [...jogadores];
     
-    novosJogadores.splice(index, 1);
-    // console.log(novosJogadores)
+  //   novosJogadores.splice(index, 1);
+  //   // console.log(novosJogadores)
 
-    setJogadores(novosJogadores);
-  };
+  //   setJogadores(novosJogadores);
+  // };
 
   return (
     <div className="App">
@@ -83,7 +83,7 @@ function App() {
           jogadores={jogadores.filter(
             (jogador) => jogador.posicao === posicao.nome
           )}
-          deletaJogador={(jogador) =>  deletaJogadores(jogador)}
+          // deletaJogador={(jogador) =>  deletaJogadores(jogador)}
         />
       ))}
       <Rodape />
