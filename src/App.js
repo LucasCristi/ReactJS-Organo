@@ -57,12 +57,12 @@ function App() {
     console.log([...jogadores])
   };
 
-  const deletaJogadores = (jogador) => {
-    console.log(jogador)
+  const deletaJogadores = (index) => {
+    // console.log(jogador)
     let novosJogadores = [...jogadores];
     
-    novosJogadores.splice(jogador, 1);
-    console.log(novosJogadores)
+    novosJogadores.splice(index, 1);
+    // console.log(novosJogadores)
 
     setJogadores(novosJogadores);
   };
