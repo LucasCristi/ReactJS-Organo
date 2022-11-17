@@ -52,20 +52,20 @@ function App() {
 
   const novoJogadorAdicionado = (jogador) => {
     // console.log(jogador); //vai criar um objeto no Formulário
-    // console.log([...jogadores, jogador])
+    console.log([ jogador])
     setJogadores([...jogadores, jogador]);
+    console.log([...jogadores])
   };
 
-  // const deletaJogadores = (jogador) => {
-  //   console.log(jogadores)
-  //   let novosJogadores = [...jogadores];
-  //   novosJogadores.splice(jogador, 1);
+  const deletaJogadores = (jogador) => {
+    console.log(jogador)
+    let novosJogadores = [...jogadores];
     
-  //   console.log(novosJogadores)
-  //   console.log(jogador)
+    novosJogadores.splice(jogador, 1);
+    console.log(novosJogadores)
 
-  //   setJogadores(novosJogadores);
-  // };
+    setJogadores(novosJogadores);
+  };
 
   return (
     <div className="App">
@@ -83,7 +83,7 @@ function App() {
           jogadores={jogadores.filter(
             (jogador) => jogador.posicao === posicao.nome
           )}
-          // deletaJogador={(jogador) =>  deletaJogadores(jogador)}
+          deletaJogador={(jogador) =>  deletaJogadores(jogador)}
         />
       ))}
       <Rodape />
