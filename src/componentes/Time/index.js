@@ -11,7 +11,7 @@ const Time = (props) => {
           <Jogador
             corDeFundo={props.corPrimaria}
             key={jogador.nome}
-            nome={`${jogador.nome} (i:${index})`} 
+            nome={`${jogador.nome} `} 
             imagem={jogador.imagem}
             selecao={jogador.selecao}
             // deletarJogador={() => props.deletaJogador(index)}
